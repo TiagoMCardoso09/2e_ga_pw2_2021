@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prj3bim1": {
+    "prjPadrao": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/prj3bim1",
+            "outputPath": "dist/prjPadrao",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "prj3bim1:build:production"
+              "browserTarget": "prjPadrao:build:production"
             },
             "development": {
-              "browserTarget": "prj3bim1:build:development"
+              "browserTarget": "prjPadrao:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "prj3bim1:build"
+            "browserTarget": "prjPadrao:build"
           }
         },
         "test": {
@@ -106,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "prj3bim1"
+  "defaultProject": "prjPadrao"
 }
